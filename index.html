@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slopdetector - AI Content Detector</title>
+  <meta name="description"
+    content="Detect AI-generated posts and comments on Reddit and LinkedIn using your choice of LLM provider.">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slopdetector.net/">
+  <meta property="og:title" content="Slopdetector - AI Content Detector">
+  <meta property="og:description" content="Detect AI-generated posts and comments on Reddit and LinkedIn using your choice of LLM provider.">
+  <meta property="og:image" content="https://slopdetector.net/assets/icons/og-preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://slopdetector.net/">
+  <meta property="twitter:title" content="Slopdetector - AI Content Detector">
+  <meta property="twitter:description" content="Detect AI-generated posts and comments on Reddit and LinkedIn using your choice of LLM provider.">
+  <meta property="twitter:image" content="https://slopdetector.net/assets/icons/og-preview.png">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/icons/slopmoji.png">
+</head>
+
+<body>
+  <div class="background-container"></div>
+
+  <header class="header container">
+    <div class="logo">
+      <img src="assets/icons/slopmoji.png" alt="Slopdetector Logo" class="logo-img">
+      <h1 class="logo-text">Slopdetector</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#getting-started">Getting Started</a>
+      <a href="https://github.com/webs7er/Slopdetector" target="_blank" class="github-link">
+        <svg viewBox="0 0 16 16" fill="currentColor" width="18" height="18">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+        </svg>
+        GitHub
+      </a>
+      <a href="https://buymeacoffee.com/vihrenp" class="donate-btn" title="Support this project" target="_blank">
+        <svg class="donate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          <line x1="6" y1="1" x2="6" y2="4"></line>
+          <line x1="10" y1="1" x2="10" y2="4"></line>
+          <line x1="14" y1="1" x2="14" y2="4"></line>
+        </svg>
+        Donate
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <img src="assets/icons/slopmoji.png" alt="Slopdetector Icon"
+        style="width: 108px; height: 108px; margin: 0 auto 24px; display: block;">
+      <h2 class="hero-title">Social Media<br><span class="highlight">AI Content Detector</span></h2>
+      <p class="hero-subtitle">
+        Run locally with LM Studio or connect to cloud AI APIs (Claude, ChatGPT, Gemini, OpenRouter).
+      </p>
+
+      <div class="install-actions">
+        <a href="https://chromewebstore.google.com/detail/slopdetector-ai-content-d/klddclokoaiflemooohmomoljkpcjalf"
+          class="btn btn-chrome" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg"
+            alt="Google Chrome" width="28" height="28" class="btn-icon" style="margin-right: 2px;">
+          <div class="btn-text">
+            <span class="btn-primary-text">Get Slopdetector for Chrome</span>
+            <span class="btn-secondary-text">From the Chrome Web Store</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="carousel-container" style="margin-top: 40px;">
+        <button class="carousel-btn prev-btn" aria-label="Previous">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Item 1 -->
+          <div class="carousel-item">
+            <div class="glass-panel">
+              <img src="assets/docs/1.screenshot-linkedin-scan-button.png" class="preview-img clickable-img">
+              <p class="preview-caption">Example: Scan buttons seamlessly integrated on a LinkedIn feed.</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <div class="glass-panel">
+              <img src="assets/docs/2.screenshot-linkedin-ambiguous.png" class="preview-img clickable-img">
+              <p class="preview-caption">Example: An ambiguous LinkedIn post showing cautious reasoning by the AI.</p>
+            </div>
+          </div>
+          <!-- Item 3: Main UI in Middle -->
+          <div class="carousel-item" id="carouselMiddle">
+            <div class="glass-panel">
+              <img src="assets/docs/Slopdetector.png" alt="Slopdetector Extension Interface" class="app-screenshot"
+                style="margin-bottom: 12px; border-radius: 8px;">
+              <p class="preview-caption">Slopdetector's user interface.</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="carousel-item">
+            <div class="glass-panel">
+              <img src="assets/docs/3.screenshot-reddit.png" class="preview-img clickable-img">
+              <p class="preview-caption">Example: A Reddit post flagged as High Confidence AI with detailed reasoning on
+                the verdict.</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="carousel-item">
+            <div class="glass-panel">
+              <img src="assets/docs/4.screenshot-clearly-human.png" class="preview-img clickable-img">
+              <p class="preview-caption">Example: A post flagged as Likely Human with highlighted human signals.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" aria-label="Next">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section id="features" class="container glass-card section-margin">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3 class="feature-title">Smart Scanning</h3>
+          <p class="feature-text">Scan buttons appear next to posts on Reddit and LinkedIn, blending naturally into your
+            usual browsing.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3 class="feature-title">Choose Your Favourite AI model</h3>
+          <p class="feature-text">Connect to Google Gemini, Anthropic Claude, OpenAI ChatGPT, OpenRouter, or
+            keep it 100% local and private with LM Studio.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">Deep Insights</h3>
+          <p class="feature-text">Hover over scan results to get detailed reasoning on
+            the linguistic signals that influenced the final verdict.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="getting-started" class="container section-margin glass-card text-center">
+      <h2 class="section-title">Getting Started</h2>
+
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="1.5"
+          fill="rgba(102, 126, 234, 0.1)" class="play-icon">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <h3 class="video-title">SoMe AI-slop detector for Chrome - Slopdetector</h3>
+        <p class="video-badge">(Video coming Soon)</p>
+        <p style="margin-top: 16px; color: var(--text-muted); font-size: 16px;">
+          In the meantime, please follow the <a
+            href="https://github.com/webs7er/Slopdetector?tab=readme-ov-file#installation" target="_blank"
+            style="color: var(--accent-primary); text-decoration: underline;">written installation guide</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="logo">
+          <img src="assets/icons/slopmoji.png" alt="Slopdetector Logo" class="logo-img"
+            style="width: 24px; height: 24px;">
+          <h4 class="logo-text" style="font-size: 18px;">Slopdetector</h4>
+        </div>
+        <p class="footer-tagline">Slopdetector: Identify AI-generated content across social media.</p>
+      </div>
+      <div class="footer-right">
+        <div class="sitemap">
+          <div class="sitemap-column">
+            <h4>Navigation</h4>
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#getting-started">Getting Started</a>
+          </div>
+          <div class="sitemap-column">
+            <h4>Connect</h4>
+            <a href="https://github.com/webs7er/Slopdetector" target="_blank">GitHub Repository</a>
+            <a href="https://chromewebstore.google.com/detail/slopdetector-ai-content-d/klddclokoaiflemooohmomoljkpcjalf"
+              target="_blank">Chrome Web Store</a>
+            <a href="https://buymeacoffee.com/vihrenp" target="_blank">Support Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Slopdetector. Open source under the MIT License.
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-btn lb-prev-btn" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <img class="lightbox-img" src="" alt="Full screen preview">
+    <button class="lightbox-btn lb-next-btn" aria-label="Next image">
+      <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    // Elements
+    const track = document.getElementById('carouselTrack');
+    const middleItem = document.getElementById('carouselMiddle');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    // Lightbox Logic
+    const images = Array.from(document.querySelectorAll('.clickable-img'));
+    let currentIndex = 0;
+    let savedScrollLeft = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    const lbPrevBtn = lightbox.querySelector('.lb-prev-btn');
+    const lbNextBtn = lightbox.querySelector('.lb-next-btn');
+
+    const showImage = (index) => {
+      if (index < 0) index = images.length - 1;
+      if (index >= images.length) index = 0;
+      currentIndex = index;
+      lightboxImg.src = images[currentIndex].src;
+    };
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        if (track) savedScrollLeft = track.scrollLeft;
+        showImage(index);
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent scrolling
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      if (track) {
+        // Restore scroll position to counter document layout shifts
+        setTimeout(() => {
+          track.scrollLeft = savedScrollLeft;
+        }, 10);
+      }
+    };
+
+    lbPrevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex - 1);
+    });
+
+    lbNextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex + 1);
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg && e.target !== lbPrevBtn && e.target !== lbNextBtn && !lbPrevBtn.contains(e.target) && !lbNextBtn.contains(e.target)) {
+        closeLightbox();
+      }
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+    });
+
+    // Carousel Logic
+    const carouselContainer = document.querySelector('.carousel-container');
+
+    const updateCarouselState = () => {
+      if (track && carouselContainer) {
+        // Measure without padding to see if it naturally overflows
+        carouselContainer.classList.remove('is-scrollable');
+        if (track.scrollWidth > track.clientWidth) {
+          carouselContainer.classList.add('is-scrollable');
+        }
+      }
+    };
+
+    window.addEventListener('resize', updateCarouselState);
+
+    // Scroll to center on load
+    window.addEventListener('load', () => {
+      updateCarouselState();
+
+      if (track && middleItem && carouselContainer && carouselContainer.classList.contains('is-scrollable')) {
+        setTimeout(() => {
+          track.scrollLeft = middleItem.offsetLeft - (track.clientWidth - middleItem.clientWidth) / 2;
+        }, 50);
+      }
+    });
+
+    // Arrow Buttons
+    if (prevBtn && nextBtn && track && middleItem) {
+      prevBtn.addEventListener('click', () => {
+        const itemWidth = middleItem.clientWidth + 30; // 30 is gap
+        track.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const itemWidth = middleItem.clientWidth + 30;
+        track.scrollBy({ left: itemWidth, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+
+</html>
